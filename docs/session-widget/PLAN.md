@@ -11,7 +11,7 @@ Goal: turn every VERIFY item into a fact before writing app code. Output: `docs/
 - [ ] [CC] Record `sw_vers`, `xcodebuild -version`, `swift --version` in FINDINGS.md.
 - [ ] [CC] Inspect `~/.claude/projects` read-only. Report folder naming, file counts, and the field names actually present in `.jsonl` lines (use `jq` on keys only, never paste prompt text). Compare to the hypotheses in ARCHITECTURE.md. Answers Q2.
 - [ ] [YOU] Start one Code-tab session in Claude Desktop in a throwaway folder and send one message. [CC] checks whether a new `.jsonl` appeared and which path. Answers Q1.
-- [ ] [CC] Read `https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link`. Record the exact folder parameter for `claude://code/new`. Test with `open "claude://code/new?<param>=<encoded folder>"`. Record whether the composer is prefilled and that the folder confirm dialog appears. Answers Q3.
+- [~] [CC] (docs read, hand test pending) Read `https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link`. Record the exact folder parameter for `claude://code/new`. Test with `open "claude://code/new?<param>=<encoded folder>"`. Record whether the composer is prefilled and that the folder confirm dialog appears. Answers Q3.
 - [ ] [CC] Check whether `WidgetFamily.systemExtraLarge` is available for macOS targets with the installed SDK. Answers Q4.
 - [ ] [YOU] In Xcode > Settings > Accounts, confirm which team is signed in (free or paid). [CC] chooses Option A or B from ARCHITECTURE.md and records it. Answers Q5.
 - [ ] [CC] Update ARCHITECTURE.md and SCOPE.md where reality differs from the docs.

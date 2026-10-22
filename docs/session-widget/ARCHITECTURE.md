@@ -26,7 +26,7 @@ Status: draft v0.1, 2026-10-22. Items marked VERIFY are hypotheses to test in Ph
 +--------------+---------------+
                | click
                v
-   claude://code/new?<folder param>  ->  Claude Desktop (Code tab, folder confirm)
+   claude://code/new?folder=<encoded path>  ->  Claude Desktop (Code tab, folder confirm)
 ```
 
 Why the split: widget extensions are sandboxed and cannot read `~/.claude`. The host app is the only reader and hands the widget a small JSON file.
@@ -75,7 +75,7 @@ Only `ClaudeCodeSource` is built in v1. Later candidates: `~/.codex/sessions`, `
       "projectPath": "/Users/<you>/dev/example-project",
       "lastPrompt": "first 160 chars of last real user prompt, single line",
       "lastActivity": "2026-10-22T09:12:03Z",
-      "openURL": "claude://code/new?<FOLDER_PARAM>=%2FUsers%2F<you>%2Fdev%2Fexample-project"
+      "openURL": "claude://code/new?folder=%2FUsers%2F<you>%2Fdev%2Fexample-project"
     }
   ]
 }
@@ -106,7 +106,7 @@ Rules:
 ## Deep link
 
 - Scheme: `claude://code/new` opens Claude Code in Claude Desktop. Documented at `https://support.claude.com/en/articles/14729294-open-claude-desktop-with-a-link`.
-- Folder parameter name: **unknown, read the support page in Phase 0** and record it in FINDINGS.md. Replace `<FOLDER_PARAM>` everywhere.
+- Folder parameter: `folder` (absolute path, URL-encoded, only the first value applied). See FINDINGS.md Q3.
 - Percent-encode the folder path.
 - Never pass `q` or any prompt text. Pass only the folder.
 - Desktop shows a confirmation dialog for folders from links. This is expected behavior and cannot be skipped.
