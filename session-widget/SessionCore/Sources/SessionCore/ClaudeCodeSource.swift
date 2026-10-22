@@ -1,7 +1,7 @@
 import Foundation
 
 /// Reads `~/.claude/projects/<encoded-cwd>/<session>.jsonl`. Read-only, never writes.
-public struct ClaudeCodeSource: SessionSource {
+public struct ClaudeCodeSource: SessionSource, Sendable {
     public let id = "claude-code"
     public let projectsRoot: URL
     public var candidateLimit = 40

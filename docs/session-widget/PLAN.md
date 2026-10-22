@@ -2,6 +2,10 @@
 
 Status: draft v0.1, 2026-10-22. Tick boxes as work completes. Do not start a phase until the previous gate passes.
 
+## Status, 2026-10-22
+
+All [CC] code for Phases 1 to 4 is written in `session-widget/` but has not been compiled, tested, or run. Phase 0 is still open. Boxes below stay unticked until each item is verified on the Mac. Start with Phase 0, then `swift test`, then `docs/session-widget/XCODE_SETUP.md`.
+
 Roles: **[CC]** Claude Code does it. **[YOU]** the user does it, usually in Xcode.
 
 ## Phase 0: Spike and verify (about 0.5 day)
